@@ -1,68 +1,32 @@
 import React from "react";
-import html from "../../public/html.png";
-import css from "../../public/css.jpg";
-import java from "../../public/java.png";
-import javascript from "../../public/javascript.png";
-import oracle from "../../public/oracle.png";
-import spring from "../../public/spring.png";
-import springBoot from "../../public/springBoot.jpg";
-import { SiMysql } from "react-icons/si";
-function Experiance() {
-  const cardItem = [
-    {
-      id: 1,
-      logo: html,
-      name: "HTML",
-    },
-    {
-      id: 2,
-      logo: css,
-      name: "CSS",
-    },
-    {
-      id: 3,
-      logo: java,
-      name: "Java",
-    },
-    {
-      id: 4,
-      logo: javascript,
-      name: "JavaScript",
-    },
-    {
-      id: 5,
-      logo: SiMysql,
-      name: "MySQL",
-    },
-    
-  
-  ];
+
+function Experience() {
   return (
     <div
-      name="Experiance"
+      name="Experience"
       className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16"
     >
       <div>
-        <h1 className="text-3xl font-bold mb-5">Experiance</h1>
-        <p className="  ">
-          I have experiance in below technologies.
-        </p>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-7 my-3">
-          {cardItem.map(({ id, logo, name }) => (
-            <div
-              className=" flex flex-col items-center justify-center border-[2px] rounded-full md:w-[200px] md:h-[200px] shadow-md p-1 cursor-pointer hover:scale-110 duration-300"
-              key={id}
-            >
-              <img src={logo} className="w-[150px] rounded-full" alt="" />
-              <div>
-                <div className="">{name}</div>
-              </div>
-            </div>
-          ))}
+        <h1 className="text-3xl font-bold mb-5">Experience</h1>
+        <div className="bg-white shadow-md rounded-lg p-6">
+          <h2 className="text-xl font-semibold">Frontend Developer Intern</h2>
+          <p className="text-gray-600">Collegites AI — Bhopal, India</p>
+          <p className="text-sm text-gray-500">Present</p>
+          <ul className="list-disc pl-5 mt-3 space-y-2">
+            <li>
+              Developed responsive and accessible UI components using React.js,
+              enhancing user engagement across multilingual video creation
+              tools.
+            </li>
+            <li>
+              Collaborated with cross-functional teams to implement scalable UI
+              features that supported AI-generated video content creation.
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   );
 }
 
-export default Experiance;
+export default Experience;

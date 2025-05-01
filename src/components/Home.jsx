@@ -1,16 +1,16 @@
 import React from "react";
 
-import pic from "../../public/photo.avif";
+import pic from "../../public/Me.png";
 
 import { FaJava, FaSquareFacebook } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
 import { FaTelegram } from "react-icons/fa6";
 
-import { SiCss3, SiHtml5, SiJavascript, SiMongodb } from "react-icons/si";
-import { SiExpress } from "react-icons/si";
+import { SiCss3, SiHtml5, } from "react-icons/si";
+
 import { FaReact } from "react-icons/fa";
-import { FaNodeJs } from "react-icons/fa6";
+
 
 import { ReactTyped } from "react-typed";
 
@@ -81,10 +81,10 @@ user-centric solutions. Quick learner and a team player eager to contribute to i
               </div>
             </div>
           </div>
-          <div className="md:w-1/2 md:ml-48 md:mt-20 mt-8 order-1">
+          <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-20 order-1">
             <img
               src={pic}
-              className="rounded-full md:w-[450px] md:h-[450px]"
+                className="rounded-full w-40 h-40 sm:w-56 sm:h-56 md:w-80 md:h-80 object-cover shadow-xl transition-transform duration-300 hover:scale-105"
               alt=""
             />
           </div>
