@@ -1,4 +1,4 @@
-import React from "react";
+
 
 import pic from "../../public/Me.png";
 
@@ -25,7 +25,7 @@ function Home() {
           <div className="md:w-1/2 mt-12 md:mt-24 space-y-2 order-2 md:order-1">
             <span className="text-xl">Welcome to My World</span>
             <div className="flex space-x-1 text-2xl md:text-4xl">
-            <h1>Hello, I'm a <br /> </h1>
+            <h1>Hello, i am a <br /> </h1>
               
               
               <ReactTyped

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import pic from "../../public/photo.avif";
+import  { useState } from "react";
+import pic from "../../public/Me.png";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-scroll";
@@ -31,7 +31,7 @@ function Navbar() {
       id: 6,
       text: "Resume",
       isExternal: true,
-      link: "Aditya_resume (2).pdf", // Update this with the correct path to your resume
+      link: "Aditya_resume.pdf", // Update this with the correct path to your resume
     },
   ];
 

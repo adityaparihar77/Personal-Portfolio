@@ -23,7 +23,7 @@ Oriental College of Technology, Bhopal
 2021 – 2025
           <br />
           XII (CBSE)
-Bank Officer's Public School, Bhopal
+Bank Officers Public School, Bhopal
 2020 – 2021
         </span>
         <br />
