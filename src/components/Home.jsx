@@ -82,11 +82,11 @@ user-centric solutions. Quick learner and a team player eager to contribute to i
             </div>
           </div>
           <div className="md:w-1/2 flex justify-center items-center mt-8 md:mt-20 order-1">
-            <img
-              src={pic}
-                className="rounded-full w-40 h-40 sm:w-56 sm:h-56 md:w-80 md:h-80 object-cover shadow-xl transition-transform duration-300 hover:scale-105"
-              alt=""
-            />
+          <img
+  src={pic}
+  className="rounded-full w-40 h-40 sm:w-56 sm:h-56 md:w-80 md:h-80 object-cover shadow-xl transition-transform duration-300 hover:scale-105 sm:max-w-none sm:max-h-none md:max-w-none md:max-h-none"
+  alt=""
+/>
           </div>
         </div>
       </div>
