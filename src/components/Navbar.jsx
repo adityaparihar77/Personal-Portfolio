@@ -31,7 +31,7 @@ function Navbar() {
       id: 6,
       text: "Resume",
       isExternal: true,
-      link: "Aditya_Resume.pdf", // Update this with the correct path to your resume
+      link: "Aditya_Resume.pdf", 
     },
   ];
 
