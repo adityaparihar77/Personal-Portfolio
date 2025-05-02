@@ -31,7 +31,7 @@ function Navbar() {
       id: 6,
       text: "Resume",
       isExternal: true,
-      link: "Aditya_Resume.pdf", 
+      link: "Aditya_resume.pdf", 
     },
   ];
 
