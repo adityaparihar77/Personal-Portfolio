@@ -17,12 +17,9 @@ function Navbar() {
     },
     {
       id: 3,
-      text: "Portfolio",
+      text: "Projects",
     },
-    {
-      id: 4,
-      text: "Experiance",
-    },
+   
     {
       id: 5,
       text: "Contact",
@@ -37,25 +34,33 @@ function Navbar() {
 
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 left-0 right-0 z-50 bg-white">
-        <div className="flex justify-between items-center h-16">
-          <div className=" flex space-x-2">
-            <img src={pic} className="h-12 w-12 rounded-full" alt="" />
-            <h1 className="font-semibold text-xl cursor-pointer">
-              Aditya Pratap Singh Parihar<span className="text-green-500 text-2xl">l</span>
-              <p className="text-sm">Front-End Developer</p>
-            </h1>
+      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-14 md:h-16 shadow-lg fixed top-0 left-0 right-0 z-50 bg-dark-bg-200/90 backdrop-blur-md border-b border-dark-purple-700/30 animate-fade-in-down">
+        <div className="flex justify-between items-center h-14 md:h-16">
+          <div className=" flex space-x-2 animate-fade-in-left">
+            <img src={pic} className="h-10 w-10 md:h-12 md:w-12 rounded-full border-2 border-dark-purple-500 glow-purple hover-scale" alt="" />
+            <div className="hidden sm:block">
+              <h1 className="font-semibold text-lg md:text-xl cursor-pointer text-white">
+                Aditya Pratap Singh Parihar<span className="gradient-text text-xl md:text-2xl animate-pulse">l</span>
+                <p className="text-xs md:text-sm text-gray-300">Front-End Developer</p>
+              </h1>
+            </div>
+            <div className="sm:hidden">
+              <h1 className="font-semibold text-sm cursor-pointer text-white">
+                Aditya<span className="gradient-text text-lg animate-pulse">l</span>
+                <p className="text-xs text-gray-300">Developer</p>
+              </h1>
+            </div>
           </div>
           {/* desktop navbar */}
           <div>
-            <ul className="hidden md:flex space-x-8">
+            <ul className="hidden md:flex space-x-6 md:space-x-8 animate-fade-in-right">
               {navItems.map(({ id, text, isExternal, link }) => (
                 <li
-                  className="hover:scale-105 duration-200 cursor-pointer"
+                  className="hover:scale-105 duration-200 cursor-pointer text-gray-300 hover:text-dark-purple-300 transition-colors hover-lift"
                   key={id}
                 >
                   {isExternal ? (
-                    <a href={link} target="_blank" rel="noopener noreferrer">
+                    <a href={link} target="_blank" rel="noopener noreferrer" className="hover:text-dark-purple-300 text-sm md:text-base">
                       {text}
                     </a>
                   ) : (
@@ -65,6 +70,7 @@ function Navbar() {
                       duration={500}
                       offset={-70}
                       activeClass="active"
+                      className="hover:text-dark-purple-300 text-sm md:text-base"
                     >
                       {text}
                     </Link>
@@ -72,19 +78,20 @@ function Navbar() {
                 </li>
               ))}
             </ul>
-            <div onClick={() => setMenu(!menu)} className="md:hidden">
-              {menu ? <IoCloseSharp size={24} /> : <AiOutlineMenu size={24} />}
+            <div onClick={() => setMenu(!menu)} className="md:hidden text-white hover:text-dark-purple-300 cursor-pointer hover-scale p-2">
+              {menu ? <IoCloseSharp size={20} className="animate-fade-in" /> : <AiOutlineMenu size={20} className="animate-fade-in" />}
             </div>
           </div>
         </div>
         {/* mobile navbar */}
         {menu && (
-          <div className="bg-white">
-            <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-3 text-xl">
+          <div className="bg-dark-bg-200/95 backdrop-blur-md border-t border-dark-purple-700/30 animate-fade-in-up md:hidden">
+            <ul className="flex flex-col h-screen items-center justify-center space-y-4 text-lg">
               {navItems.map(({ id, text, isExternal, link }) => (
                 <li
-                  className="hover:scale-105 duration-200 font-semibold cursor-pointer"
+                  className="hover:scale-105 duration-200 font-semibold cursor-pointer text-gray-300 hover:text-dark-purple-300 transition-colors animate-fade-in-up py-2"
                   key={id}
+                  style={{ animationDelay: `${id * 0.1}s` }}
                 >
                   {isExternal ? (
                     <a 
@@ -92,6 +99,7 @@ function Navbar() {
                       target="_blank" 
                       rel="noopener noreferrer"
                       onClick={() => setMenu(!menu)}
+                      className="hover:text-dark-purple-300 block px-4 py-2"
                     >
                       {text}
                     </a>
@@ -103,6 +111,7 @@ function Navbar() {
                       duration={500}
                       offset={-70}
                       activeClass="active"
+                      className="hover:text-dark-purple-300 block px-4 py-2"
                     >
                       {text}
                     </Link>
