@@ -1,47 +1,98 @@
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import About from "./components/About";
-import PortFolio from "./components/PortFolio";
-import Footer from "./components/Footer";
-import Contact from "./components/Contact";
-import { Toaster } from "react-hot-toast";
-import { useScrollAnimation } from "./hooks/useScrollAnimation";
+import { useEffect } from 'react';
+import { Toaster } from 'react-hot-toast';
+import NavbarNew from './components/NavbarNew';
+import Hero from './components/Hero';
+import AboutNew from './components/AboutNew';
+import Skills from './components/Skills';
+import ProjectsNew from './components/ProjectsNew';
+import Experience from './components/Experience';
+import ContactNew from './components/ContactNew';
+import FooterNew from './components/FooterNew';
+import CustomCursor from './components/CustomCursor';
+import ScrollProgress from './components/ScrollProgress';
+import useSmoothScroll from './hooks/useSmoothScroll';
 
 function App() {
-  const scrollY = useScrollAnimation();
+  // Initialize smooth scroll
+  useSmoothScroll();
+
+  // Hide default cursor on desktop
+  useEffect(() => {
+    if (window.innerWidth > 768) {
+      document.body.style.cursor = 'none';
+      document.querySelectorAll('a, button').forEach((el) => {
+        el.style.cursor = 'none';
+      });
+    }
+  }, []);
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-purple-black relative overflow-hidden">
-        {/* Animated background particles */}
-        <div className="fixed inset-0 pointer-events-none">
-          <div className="absolute top-20 left-10 w-2 h-2 bg-dark-purple-400 rounded-full animate-float opacity-60"></div>
-          <div className="absolute top-40 right-20 w-1 h-1 bg-dark-purple-300 rounded-full animate-float opacity-40" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-80 left-1/4 w-1.5 h-1.5 bg-dark-purple-500 rounded-full animate-float opacity-50" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute bottom-40 right-1/3 w-1 h-1 bg-dark-purple-400 rounded-full animate-float opacity-30" style={{ animationDelay: '0.5s' }}></div>
-          <div className="absolute bottom-20 left-1/3 w-2 h-2 bg-dark-purple-300 rounded-full animate-float opacity-60" style={{ animationDelay: '1.5s' }}></div>
+      {/* Custom cursor (desktop only) */}
+      {window.innerWidth > 768 && <CustomCursor />}
+      
+      {/* Scroll progress indicator */}
+      <ScrollProgress />
+
+      {/* Main app container */}
+      <div className="min-h-screen bg-black relative overflow-hidden">
+        {/* Animated mesh gradient background */}
+        <div 
+          className="fixed inset-0 bg-gradient-mesh opacity-30 animate-gradient pointer-events-none"
+          style={{ backgroundSize: '400% 400%' }}
+        />
+
+        {/* Animated particles */}
+        <div className="fixed inset-0 pointer-events-none overflow-hidden">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-accent-primary/30 rounded-full animate-float"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 5}s`,
+                animationDuration: `${5 + Math.random() * 10}s`,
+              }}
+            />
+          ))}
         </div>
 
-        {/* Parallax background gradient */}
-        <div 
-          className="fixed inset-0 opacity-20 animate-gradient"
-          style={{ transform: `translateY(${scrollY * 0.5}px)` }}
-        ></div>
-
-        <Navbar />
-        <Home />
-        <About />
-        <PortFolio />
-        <Contact />
-        <Footer />
+        {/* Components */}
+        <NavbarNew />
+        <Hero />
+        <AboutNew />
+        <Skills />
+        <ProjectsNew />
+        <Experience />
+        <ContactNew />
+        <FooterNew />
       </div>
-      <Toaster 
+
+      {/* Toast notifications */}
+      <Toaster
         position="top-right"
         toastOptions={{
+          duration: 3000,
           style: {
-            background: '#1a1a2e',
+            background: 'rgba(26, 26, 46, 0.9)',
+            backdropFilter: 'blur(10px)',
             color: '#ffffff',
-            border: '1px solid #7c3aed',
+            border: '1px solid rgba(168, 85, 247, 0.3)',
+            borderRadius: '12px',
+            padding: '16px',
+          },
+          success: {
+            iconTheme: {
+              primary: '#a855f7',
+              secondary: '#ffffff',
+            },
+          },
+          error: {
+            iconTheme: {
+              primary: '#ef4444',
+              secondary: '#ffffff',
+            },
           },
         }}
       />
@@ -50,3 +101,4 @@ function App() {
 }
 
 export default App;
+
