@@ -85,7 +85,7 @@ const Hero = () => {
             >
               <div className="w-full h-full rounded-full overflow-hidden border-4 border-black/50">
                 <img
-                  src="/Aditya.jpeg"
+                  src="public\Aditya.jpeg"
                   alt="Aditya Parihar"
                   className="w-full h-full object-cover object-center scale-110 hover:scale-125 transition-transform duration-700"
                 />
