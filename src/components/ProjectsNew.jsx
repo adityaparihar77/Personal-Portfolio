@@ -17,7 +17,7 @@ const ProjectsNew = () => {
       problem: 'Companies struggle with manual employee tracking and performance evaluation processes.',
       solution: 'Built a scalable system with real-time updates, role-based access, and automated reporting.',
       tech: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Tailwind CSS'],
-      image: '/projects/ems.jpg',
+      image: '/EMS.jpeg',
       liveUrl: 'https://ems-demo.com',
       githubUrl: 'https://github.com/yourusername/ems',
       features: [
@@ -36,7 +36,7 @@ const ProjectsNew = () => {
       problem: 'Traditional communication tools lack real-time responsiveness and modern UI.',
       solution: 'Created an instant messaging platform with WebSocket technology for zero-latency communication.',
       tech: ['React', 'Socket.io', 'Node.js', 'Express', 'MongoDB', 'Cloudinary'],
-      image: '/projects/chat.jpg',
+      image: '/CSW.png',
       liveUrl: 'https://dochat-demo.com',
       githubUrl: 'https://github.com/yourusername/dochat',
       features: [
@@ -55,7 +55,7 @@ const ProjectsNew = () => {
       problem: 'Generic portfolio templates fail to capture personality and technical expertise.',
       solution: 'Designed a cinematic, interactive experience using Framer Motion and Three.js.',
       tech: ['React', 'Three.js', 'Framer Motion', 'Tailwind CSS', 'Lenis'],
-      image: '/projects/portfolio.jpg',
+      image: '/Screenshot 2025-05-03 003227.png',
       liveUrl: 'https://yourportfolio.com',
       githubUrl: 'https://github.com/yourusername/portfolio',
       features: [
@@ -74,7 +74,7 @@ const ProjectsNew = () => {
       problem: 'Small businesses need affordable, feature-rich online stores.',
       solution: 'Built a scalable platform with Stripe integration and comprehensive admin tools.',
       tech: ['Next.js', 'TypeScript', 'Stripe', 'Prisma', 'PostgreSQL', 'Zustand'],
-      image: '/projects/ecommerce.jpg',
+      image: '/S.png',
       liveUrl: 'https://shop-demo.com',
       githubUrl: 'https://github.com/yourusername/ecommerce',
       features: [
@@ -93,7 +93,7 @@ const ProjectsNew = () => {
       problem: 'Teams need an intuitive way to organize and track project progress.',
       solution: 'Created a visual workflow tool with real-time collaboration capabilities.',
       tech: ['React', 'Redux Toolkit', 'DnD Kit', 'Firebase', 'Material UI'],
-      image: '/projects/taskmanager.jpg',
+      image: '/bag.png',
       liveUrl: 'https://tasks-demo.com',
       githubUrl: 'https://github.com/yourusername/taskmanager',
       features: [
