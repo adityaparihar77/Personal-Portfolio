@@ -204,7 +204,7 @@ const Hero = () => {
           </motion.button>
 
           <motion.a
-            href="public/Aditya Resume.pdf"
+            href="/Aditya Resume.pdf"
             download
             className="group px-6 sm:px-8 py-3 sm:py-4 bg-white/5 backdrop-blur-md rounded-full font-semibold text-white border-2 border-white/20 hover:border-accent-primary transition-all flex items-center gap-2 text-sm sm:text-base"
             whileHover={{ scale: 1.05 }}
